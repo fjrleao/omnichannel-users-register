@@ -3,18 +3,25 @@ import { SButton, SFormContainer, SInput, SLabel } from './components/Form'
 import { GlobalStyles } from './styles/globalStyles'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { TUser, userSchema } from './schemas/users.schema'
+import { api } from './configs/api'
 
 function App() {
 	const {
 		register,
 		handleSubmit,
 		formState: { errors },
+		reset,
 	} = useForm<TUser>({
 		resolver: zodResolver(userSchema),
 	})
 
-	function submit(data: TUser) {
-		console.log(data)
+	async function submit(data: TUser) {
+		try {
+			const response = await api.post('/users', (data = data))
+			reset()
+		} catch (error) {
+			console.error(error)
+		}
 	}
 
 	return (
