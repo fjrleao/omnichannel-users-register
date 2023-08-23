@@ -11,5 +11,5 @@ class UserAddress(EmbeddedDocument):
 
 class User(Document):
     name = StringField(required=True)
-    email = StringField(required=True)
+    email = StringField(required=True, unique=True)
     address = EmbeddedDocumentField(UserAddress)
