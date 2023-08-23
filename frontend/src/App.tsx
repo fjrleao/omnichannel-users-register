@@ -1,9 +1,12 @@
+import 'react-toastify/dist/ReactToastify.css'
 import { useForm } from 'react-hook-form'
 import { SButton, SFormContainer, SInput, SLabel } from './components/Form'
 import { GlobalStyles } from './styles/globalStyles'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { TUser, userSchema } from './schemas/users.schema'
 import { api } from './configs/api'
+import { ToastContainer, toast } from 'react-toastify'
+import { AxiosError } from 'axios'
 
 function App() {
 	const {
@@ -17,16 +20,38 @@ function App() {
 
 	async function submit(data: TUser) {
 		try {
-			const response = await api.post('/users', (data = data))
+			await api.post('/users', (data = data))
 			reset()
-		} catch (error) {
-			console.error(error)
+			toast.success('User register with success', {
+				position: 'top-right',
+				autoClose: 5000,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: true,
+				progress: undefined,
+				theme: 'light',
+			})
+		} catch (error: any) {
+			if (error instanceof AxiosError) {
+				toast.error(error.response?.data.message, {
+					position: 'top-right',
+					autoClose: 5000,
+					hideProgressBar: false,
+					closeOnClick: true,
+					pauseOnHover: true,
+					draggable: true,
+					progress: undefined,
+					theme: 'light',
+				})
+			}
 		}
 	}
 
 	return (
 		<>
 			<GlobalStyles />
+			<ToastContainer />
 			<SFormContainer>
 				<form onSubmit={handleSubmit(submit)}>
 					<h3>Cadastro de usuários</h3>
