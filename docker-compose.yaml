@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  frontend:
+    container_name: frontend_react
+    build: ./frontend
+    environment:
+      - VITE_API_URL=http://127.0.0.1:5555/
+    ports:
+      - 5173:5173
+    depends_on:
+      - backend
+
+  backend:
+    container_name: backend_flask
+    build: ./backend
+    environment:
+      - FLASK_ENV=development
+      - MONGODB_URI=mongodb://user:1234@database_mongodb:27017/database?authSource=admin
+      - FLASK_DEBUG=True
+      - VIACEP_BASE_URL=https://viacep.com.br/ws
+    ports:
+      - 5555:5000
+    depends_on:
+      - mongodb
+
+  mongodb:
+    container_name: database_mongodb
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: user
+      MONGO_INITDB_ROOT_PASSWORD: 1234
