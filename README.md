@@ -56,7 +56,7 @@ cd app
 flask run
 ```
 
-O backend estará executando e pode ser acessado atráves de `http://127.0.0.1:5000`.
+O backend estará executando e pode ser acessado atráves de `localhost:5000`.
 
 #### Frontend
 
@@ -74,7 +74,7 @@ Com tudo instalado e configurado, basta executar o projeto:
 npm run dev
 ```
 
-O frontend estará executando e pode ser acessado atráves de `http://127.0.0.1:5173`.
+O frontend estará executando e pode ser acessado atráves de `localhost:5173`.
 
 ## Documentação das Rotas da API
 
