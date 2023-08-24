@@ -1,16 +1,25 @@
 1. A solução deve ser disponibilizada em Cloud ou On-premise?
-Essa solução deve ser disponibilizada em cloud, sendo que o deploy do backend e do frontend precisam ser feitos em serviços distintos.
+Essa solução deve ser disponibilizada em cloud, sendo que o deploy do backend e do
+frontend precisam ser feitos em serviços distintos.
 
 2. Considerando a participação de 4 pessoas técnicas para o desenvolvimento dessa solução,
 responda qual ferramenta acreditas ser apropriada para o controle de tarefas da equipe,
 a ferramenta é ágil?
-Acredito que o Jira ou o Trello são excelentes opções para o gerenciamento de tarefas da equipe, pois ambas as ferramentas oferecem a funcionalidade de quadro kanban. Essas ferramentas são compatíveis com abordagens ágeis, como o Scrum.
+Acredito que o Jira ou o Trello são excelentes opções para o gerenciamento de tarefas da equipe,
+pois ambas as ferramentas oferecem a funcionalidade de quadro kanban.
+Essas ferramentas são compatíveis com abordagens ágeis, como o Scrum.
 
 3. Você se sente capaz de liderar esta equipe? Por quê?
-Sim. Tenho cerca de quatro anos de experiência em desenvolvimento de software, sou uma pessoa responsável, proativa e profundamente comprometida com a qualidade do trabalho. Além disso, possuo um ano de experiência em liderança de equipes.
+Sim. Tenho cerca de quatro anos de experiência em desenvolvimento de software,
+sou uma pessoa responsável, proativa e profundamente comprometida com a qualidade do trabalho.
+Além disso, possuo um ano de experiência em liderança de equipes.
 
 4. Se pudesse sugerir uma melhoria, mudança ou oportunidade. O que seria?
-Eu sugeriria uma mudança, que seria responder essas questões no próprio formulário de envio do desafio ao invés de subir o arquivo .txt pro repositório.
+Eu sugeriria uma mudança, que seria responder essas questões no próprio
+formulário de envio do desafio ao invés de subir o arquivo .txt pro repositório.
 
 5. Acha válido esse desafio para o processo que está participando?
-Sim, considero válido. Esse desafio testou várias das minhas habilidades, como por exemplo a capacidade de iniciar um projeto do zero, selecionando tecnologias e arquitetura para abordar o problema. Além disso, foi necessário desenvolver o backend, assim como o frontend para proporcionar a iteração do usuário com o software.
+Sim, considero válido. Esse desafio testou várias das minhas habilidades,
+como por exemplo a capacidade de iniciar um projeto do zero, selecionando tecnologias
+e arquitetura para abordar o problema. Além disso, foi necessário desenvolver o backend,
+assim como o frontend para proporcionar a iteração do usuário com o software.
